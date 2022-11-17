@@ -40,19 +40,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zfe-gd-jam">
+                                <rect key="frame" x="62" y="270" width="269" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="SWd-8p-eV6"/>
+                                    <constraint firstAttribute="height" constant="29" id="Wxv-5X-p0e"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Woo-FT-0eW"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="Zfe-gd-jam" firstAttribute="top" secondItem="Ksf-ic-gHr" secondAttribute="bottom" constant="71" id="8m3-ut-fSA"/>
                             <constraint firstItem="Ksf-ic-gHr" firstAttribute="top" secondItem="Jf8-df-65n" secondAttribute="bottom" constant="52" id="M6y-7c-LSJ"/>
                             <constraint firstItem="Jf8-df-65n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="aIM-3T-0We"/>
                             <constraint firstItem="Jf8-df-65n" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kxA-ev-Pue"/>
                             <constraint firstItem="Ksf-ic-gHr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mkl-r6-AvA"/>
+                            <constraint firstItem="Zfe-gd-jam" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w2b-Cq-IU5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="Ksf-ic-gHr" id="xGF-eW-eU8"/>
                         <outlet property="segmentedControl" destination="Jf8-df-65n" id="Q0Q-iL-v5l"/>
+                        <outlet property="slider" destination="Zfe-gd-jam" id="DQc-dx-5v9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
