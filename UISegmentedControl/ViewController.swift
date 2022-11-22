@@ -57,12 +57,13 @@ class ViewController: UIViewController {
     
     @IBAction func sliderAction(_ sender: UISlider) {
         
-        label.text = String(sender.value)
-//        let backgroundColor = self.view.backgroundColor
-//
-//        self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+        label.text = String(round(sender.value * 100)/100.0)
+        let backgroundColor = self.view.backgroundColor
+
+        self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+    
         
-        self.view.backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+///        self.view.backgroundColor?.withAlphaComponent(CGFloat(sender.value))
         
         
         
