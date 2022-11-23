@@ -50,13 +50,36 @@
                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Woo-FT-0eW"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wIf-0a-1Pe">
+                                <rect key="frame" x="64" y="343" width="265" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="XOe-gc-q0y"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSG-cV-3Sz">
+                                <rect key="frame" x="64" y="438" width="265" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXU-oQ-Bwx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="rSG-cV-3Sz" firstAttribute="top" secondItem="wIf-0a-1Pe" secondAttribute="bottom" constant="61" id="0LW-3N-Q14"/>
                             <constraint firstItem="Zfe-gd-jam" firstAttribute="top" secondItem="Ksf-ic-gHr" secondAttribute="bottom" constant="71" id="8m3-ut-fSA"/>
+                            <constraint firstItem="rSG-cV-3Sz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="98k-GQ-IIK"/>
+                            <constraint firstItem="wIf-0a-1Pe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cre-YA-STB"/>
                             <constraint firstItem="Ksf-ic-gHr" firstAttribute="top" secondItem="Jf8-df-65n" secondAttribute="bottom" constant="52" id="M6y-7c-LSJ"/>
+                            <constraint firstItem="rSG-cV-3Sz" firstAttribute="width" secondItem="wIf-0a-1Pe" secondAttribute="width" id="YAi-6L-0Od"/>
                             <constraint firstItem="Jf8-df-65n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="aIM-3T-0We"/>
+                            <constraint firstItem="wIf-0a-1Pe" firstAttribute="top" secondItem="Zfe-gd-jam" secondAttribute="bottom" constant="44" id="kEv-dC-k7j"/>
                             <constraint firstItem="Jf8-df-65n" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kxA-ev-Pue"/>
                             <constraint firstItem="Ksf-ic-gHr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mkl-r6-AvA"/>
                             <constraint firstItem="Zfe-gd-jam" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w2b-Cq-IU5"/>
@@ -66,6 +89,7 @@
                         <outlet property="label" destination="Ksf-ic-gHr" id="xGF-eW-eU8"/>
                         <outlet property="segmentedControl" destination="Jf8-df-65n" id="Q0Q-iL-v5l"/>
                         <outlet property="slider" destination="Zfe-gd-jam" id="DQc-dx-5v9"/>
+                        <outlet property="textField" destination="wIf-0a-1Pe" id="rT7-Km-iu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,6 +98,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
