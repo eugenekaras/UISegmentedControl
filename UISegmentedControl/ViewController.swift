@@ -78,9 +78,14 @@ class ViewController: UIViewController {
         guard textField.text?.isEmpty == false else { return }
         
         if let _ = Double(textField.text!) {
+            let alert = UIAlertController(title: "Wrong format", message: "Please enter your nane", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
             print("Name format is wrong")
         } else {
             label.text = textField.text
+            textField.text = nil
         }
         
  
